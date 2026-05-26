@@ -1,1 +1,367 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E VARIÁVEIS (Identidade Visual)
+   ========================================================================== */
+:root {
+    --cor-principal: #2e7d32; /* Verde Agro */
+    --cor-secundaria: #81c784; /* Verde Claro */
+    --cor-escura: #1b5e20; /* Verde Escuro */
+    --cor-fundo: #f4f9f4; /* Fundo Leve */
+    --cor-texto: #333333;
+    --cor-branca: #ffffff;
+    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transicao: all 0.3s ease;
+}
 
+/* Variáveis para o Modo Escuro */
+body.dark-mode {
+    --cor-fundo: #121212;
+    --cor-texto: #e0e0e0;
+    --cor-branca: #1e1e1e;
+    --cor-principal: #4caf50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    transition: var(--transicao);
+}
+
+/* ==========================================================================
+   2. CABEÇALHO (HEADER) E NAVEGAÇÃO (NAV)
+   ========================================================================== */
+#main-header {
+    background-color: var(--cor-branca);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo h1 {
+    color: var(--cor-principal);
+}
+
+.logo h1 span {
+    color: var(--cor-escura);
+}
+
+#toggle-dark-mode {
+    background-color: var(--cor-principal);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transicao);
+}
+
+#toggle-dark-mode:hover {
+    background-color: var(--cor-escura);
+    transform: scale(1.05);
+}
+
+#main-nav {
+    background-color: var(--cor-principal);
+    sticky: top;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#main-nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    transition: var(--transicao);
+}
+
+#main-nav a:hover {
+    background-color: var(--cor-escura);
+}
+
+/* ==========================================================================
+   3. SEÇÃO INTRODUTÓRIA (HERO)
+   ========================================================================== */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/hero-agro.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 2rem;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: var(--cor-principal);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: var(--transicao);
+}
+
+.btn-principal:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-escura);
+}
+
+/* ==========================================================================
+   4. SEÇÃO DE CARDS (PILARES)
+   ========================================================================== */
+.cards-section {
+    padding: 4rem 5%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h3 {
+    font-size: 2rem;
+    color: var(--cor-principal);
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--cor-branca);
+    flex: 1;
+    min-width: 280px;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: var(--transicao);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.card h4 {
+    margin-bottom: 0.5rem;
+    color: var(--cor-principal);
+}
+
+/* ==========================================================================
+   5. SEÇÃO INTERATIVA (SIMULADOR DE DECISÕES)
+   ========================================================================== */
+.interactive-section {
+    background-color: var(--cor-branca);
+    padding: 4rem 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.simulator-box {
+    background-color: var(--cor-fundo);
+    border: 2px solid var(--cor-secundaria);
+    padding: 2.5rem;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.status-panel {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 0.8rem;
+    border-radius: 6px;
+    font-weight: bold;
+    margin: 1.5rem 0;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.quiz-btn {
+    background-color: var(--cor-branca);
+    border: 2px solid var(--cor-principal);
+    color: var(--cor-texto);
+    padding: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transicao);
+}
+
+.quiz-btn:hover {
+    background-color: var(--cor-principal);
+    color: white;
+}
+
+#feedback-message {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.sucesso { color: #2e7d32; background-color: #e8f5e9; }
+.erro { color: #c62828; background-color: #ffebee; }
+
+#reset-simulator {
+    margin-top: 1.5rem;
+    background-color: var(--cor-texto);
+    color: var(--cor-branca);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   6. SEÇÃO DE CONTATO / FORMULÁRIO
+   ========================================================================== */
+.form-section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+#contact-form {
+    max-width: 500px;
+    margin: 2rem auto 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--cor-branca);
+    color: var(--cor-texto);
+}
+
+.error-msg {
+    color: #d32f2f;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--cor-principal);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.btn-submit:hover {
+    background-color: var(--cor-escura);
+}
+
+.hidden-msg { display: none; text-align: center; margin-top: 1rem; font-weight: bold; }
+.hidden { display: none; }
+
+/* ==========================================================================
+   7. RODAPÉ (FOOTER)
+   ========================================================================== */
+#main-footer {
+    background-color: var(--cor-escura);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+#main-footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   8. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    #main-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #main-nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #main-nav a {
+        padding: 0.8rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .cards-container {
+        flex-direction: column;
+    }
+}

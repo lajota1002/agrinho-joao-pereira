@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAgro - Futuro Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header id="main-header">
+        <div class="logo">
+            <h1>Eco<span>Agro</span></h1>
+        </div>
+        <button id="toggle-dark-mode" aria-label="Alternar modo escuro">🌙 Modo Escuro</button>
+    </header>
+
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#pilares">Pilares</a></li>
+            <li><a href="#simulador">Simulador</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h2>Agro Forte, Futuro Sustentável</h2>
+                <p>Descubra como o equilíbrio entre a alta produção no campo e a preservação do meio ambiente garante o futuro do nosso planeta.</p>
+                <a href="#simulador" class="btn-principal">Testar Simulador</a>
+            </div>
+        </section>
+
+        <section id="pilares" class="cards-section">
+            <div class="section-title">
+                <h3>Tecnologias no Campo</h3>
+                <p>Três pilares fundamentais para o equilíbrio ambiental e produtivo.</p>
+            </div>
+            <div class="cards-container">
+                <article class="card">
+                    <img src="img/energia-solar.jpg" alt="Painéis de energia solar em uma fazenda" class="card-img">
+                    <h4>Energia Limpa</h4>
+                    <p>O uso de painéis solares e biomassa reduz a pegada de carbono e barateia a produção agrícola.</p>
+                </article>
+                <article class="card">
+                    <img src="img/compostagem.jpg" alt="Processo de compostagem orgânica" class="card-img">
+                    <h4>Compostagem</h4>
+                    <p>Transformação de resíduos orgânicos em adubo natural, diminuindo o uso de fertilizantes químicos.</p>
+                </article>
+                <article class="card">
+                    <img src="img/monitoramento.jpg" alt="Drone sobrevoando plantação" class="card-img">
+                    <h4>Gestão Inteligente</h4>
+                    <p>Drones e sensores monitoram o solo e a água, evitando desperdícios e protegendo os recursos locais.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="simulador" class="interactive-section">
+            <div class="simulator-box">
+                <h3>Simulador de Fazenda Sustentável</h3>
+                <p>Tome decisões como um produtor consciente e veja o impacto no seu medidor!</p>
+                
+                <div class="status-panel">
+                    <p>Sustentabilidade: <span id="score-text">100%</span></p>
+                </div>
+
+                <div id="quiz-container">
+                    <p id="question-text">Qual técnica você usará para proteger o solo contra a erosão?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-btn" data-impact="0">Uso intensivo de químicos</button>
+                        <button class="quiz-btn" data-impact="20">Plantio direto e rotação de culturas</button>
+                    </div>
+                </div>
+                
+                <p id="feedback-message" class="hidden"></p>
+                <button id="reset-simulator" class="hidden">Reiniciar Simulador</button>
+            </div>
+        </</section>
+
+        <section id="contato" class="form-section">
+            <h3>Faça Parte do Futuro</h3>
+            <p>Envie suas dúvidas ou ideias sobre a agricultura sustentável.</p>
+            
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
+                    <span class="error-msg" id="error-nome"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com">
+                    <span class="error-msg" id="error-email"></span>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            </form>
+            <div id="form-success" class="hidden-msg">Mensagem enviada com sucesso! 🌱</div>
+        </</section>
+
+    </main>
+
+    <footer id="main-footer">
+        <p>&copy; 2026 - Desenvolvido para o Projeto Agrinho 2026.</p>
+        <p>Subcategoria 3: HTML, CSS e JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
